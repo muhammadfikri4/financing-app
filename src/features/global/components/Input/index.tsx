@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   rounded?: "sm" | "md" | "lg";
   error?: boolean;
   LeftIcon?: ReactElement;
