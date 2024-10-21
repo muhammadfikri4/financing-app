@@ -6,33 +6,33 @@ export const menus: ISidebarItemProps[] = [
     items: [
       {
         id: 1,
-        name: "Department",
-        path: '/'
+        name: "User",
+        path: "/",
       },
+      {
+        id: 2,
+        name: "Department",
+        path: "/department",
+      },
+      {
+        id: 3,
+        name: "User",
+        path: "/users",
+      }
     ],
   },
   {
     title: "Budgets",
     items: [
       {
-        id: 1,
-        name: "Department",
-        path: '/department'
+        id: 4,
+        name: "Budget",
+        path: "/budget",
       },
       {
-        id: 1,
-        name: "Department",
-        path: '/department'
-      },
-      {
-        id: 1,
-        name: "Department",
-        path: '/department'
-      },
-      {
-        id: 1,
-        name: "Department",
-        path: '/department'
+        id: 5,
+        name: "Progress",
+        path: "/progress",
       },
     ],
   },

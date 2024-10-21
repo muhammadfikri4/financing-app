@@ -1,9 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
-import { Wrapper } from "../../features/global/views/Wrapper";
-import { Auth } from "../../features/global/views/Auth";
 import { LoginViews } from "@features/authentication/views/Login";
 import { RegisterViews } from "@features/authentication/views/Register";
-import { HomeViews } from "@features/home/views/Home";
+import { DepartmentsViews } from "@features/departments/views/Departments";
+import { UsersViews } from "@features/users/views/Users";
+import { createBrowserRouter } from "react-router-dom";
+import { Auth } from "../../features/global/views/Auth";
+import { Wrapper } from "../../features/global/views/Wrapper";
 
 export const router = createBrowserRouter([
   {
@@ -12,15 +13,15 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <HomeViews />,
+        element: <UsersViews />,
       },
       {
         path: "/department",
-        element: <HomeViews />,
+        element: <DepartmentsViews />,
       },
       {
-        path: "/",
-        element: <HomeViews />,
+        path: "/users",
+        element: <UsersViews />,
       },
     ],
   },

@@ -1,6 +1,7 @@
 import { config } from "@core/libs/config";
 import { AuthLoginModel } from "@core/model/auth";
 import { authService } from "@core/service/auth";
+import { cookie } from "@features/global/utils/cookies";
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -14,7 +15,8 @@ export const useAuthLoginCreation = () => {
         password: btoa(data.password),
       }),
     onSuccess: (res) => {
-      localStorage.setItem(config.storage, res.data?.accessToken ?? "");
+      // localStorage.setItem(config.storage, res.data?.accessToken ?? "");
+      cookie.save(config.storage, res.data?.accessToken);
       navigate("/");
       toast.success(res.message, {
         position: "top-right",

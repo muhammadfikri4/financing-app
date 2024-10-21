@@ -58,7 +58,7 @@ export const FormRegister = () => {
         <div className="flex flex-col gap-1">
           <p className="text-sm font-poppins">Role</p>
           <Dropdown
-          searchInput
+            searchInput
             placeholder="Select Role"
             list={[
               {
