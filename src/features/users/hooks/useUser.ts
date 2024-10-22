@@ -1,5 +1,5 @@
 import { userService } from "@core/service/user";
-import useDebounce from "@features/global/hooks/useDebounce";
+import useDebounce from "@features/_global/hooks/useDebounce";
 import { useQuery } from "@tanstack/react-query";
 import { useSearchParams } from "react-router-dom";
 

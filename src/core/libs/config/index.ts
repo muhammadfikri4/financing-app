@@ -11,5 +11,6 @@ export const endpoint = {
         signup: `${config.api.url}/auth/sign-up`
     },
     departments: `${config.api.url}/departments`,
-    users: `${config.api.url}/users`
+    users: `${config.api.url}/users`,
+    profile: `${config.api.url}/profile`
 }

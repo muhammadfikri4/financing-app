@@ -1,6 +1,6 @@
 import { AuthLoginModel } from "@core/model/auth";
-import { Button } from "@features/global/components/Button";
-import { Input } from "@features/global/components/Input";
+import { Button } from "@features/_global/components/Button";
+import { Input } from "@features/_global/components/Input";
 import { useState } from "react";
 
 import { BsEye, BsEyeSlash } from "react-icons/bs";

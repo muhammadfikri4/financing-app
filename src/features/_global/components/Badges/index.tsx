@@ -3,6 +3,7 @@ import React from "react";
 interface IBadgesProps {
   text: string;
   variant?: "primary" | "secondary" | "danger";
+  size?: 'sm' | 'md' | 'lg'
 }
 
 const generateVariant = (variant: IBadgesProps["variant"]) => {
@@ -34,15 +35,29 @@ const generateVariant = (variant: IBadgesProps["variant"]) => {
   }
 };
 
+const generatedSize = (size: IBadgesProps['size']) => {
+  switch(size) {
+    case 'lg':
+      return 'py-1.5 px-3'
+    case 'md':
+      return 'py-1 px-2'
+    case 'sm':
+      return 'py-0.5 px-1.5'
+    default:
+      return'py-1 px-2'
+  }
+}
+
 export const Badges: React.FC<IBadgesProps> = ({
   text,
   variant = "primary",
+  size = 'md'
 }) => {
   return (
     <div
       className={`${
         generateVariant(variant).bg
-      } w-max px-3 py-1 rounded-md border border-solid ${
+      } w-max ${generatedSize(size)} rounded-md border border-solid ${
         generateVariant(variant).border
       }`}
     >

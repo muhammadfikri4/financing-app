@@ -1,6 +1,6 @@
-import { Button } from "@features/global/components/Button";
-import { Dropdown } from "@features/global/components/Dropdown";
-import { Input } from "@features/global/components/Input";
+import { Button } from "@features/_global/components/Button";
+import { Dropdown } from "@features/_global/components/Dropdown";
+import { Input } from "@features/_global/components/Input";
 import { useState } from "react";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { HiOutlineQrCode } from "react-icons/hi2";

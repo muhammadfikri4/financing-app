@@ -1,7 +1,7 @@
 import { config } from "@core/libs/config";
 import { AuthLoginModel } from "@core/model/auth";
 import { authService } from "@core/service/auth";
-import { cookie } from "@features/global/utils/cookies";
+import { cookie } from "@features/_global/utils/cookies";
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";

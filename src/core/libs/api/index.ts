@@ -1,6 +1,6 @@
-import { convertObjectToQueryParams } from "@features/global/helper";
+import { convertObjectToQueryParams } from "@features/_global/helper";
 import { ApiOption, MethodTypes, getContentType } from "./types";
-import { cookie } from "@features/global/utils/cookies";
+import { cookie } from "@features/_global/utils/cookies";
 import { config } from "../config";
 
 const generateEndpoint = (
@@ -19,7 +19,6 @@ const generateEndpoint = (
   }
   return result;
 };
-
 
 async function createRequest<Res = unknown, Req = unknown>(
   endpoint: string,

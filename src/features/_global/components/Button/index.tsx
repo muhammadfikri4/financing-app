@@ -1,15 +1,18 @@
 import { ReactNode } from "react";
+import { generateSize } from "./utils";
 
-interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  variant?: "primary" | "secondary" | "danger" | "disabled";
+  variant?: "primary" | "secondary" | "danger"| 'success' | "disabled";
   rounded?: "sm" | "md" | "lg" | "full";
+  size?: "sm" | "md" | "lg";
 }
 
 export const Button: React.FC<IButtonProps> = ({
   children,
   variant = "primary",
   rounded = "md",
+  size = "md",
   ...rest
 }) => {
   return (
@@ -23,8 +26,10 @@ export const Button: React.FC<IButtonProps> = ({
         : variant == "secondary"
         ? "bg-gray-50"
         : variant == "primary"
-        ? "bg-blue-500"
+        ? "bg-blue-500":
+        variant == 'success' ? "bg-green-500" 
         : "bg-gray-300"
+
     }
     ${
       variant == "secondary" || variant == "disabled"
@@ -45,10 +50,8 @@ export const Button: React.FC<IButtonProps> = ({
         ? "rounded-lg"
         : "rounded-md"
     }
-    font-semibold
     font-poppins
-    px-4
-    py-2.5
+    ${generateSize(size)}
     w-full
     duration-300
     ${

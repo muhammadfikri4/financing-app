@@ -1,4 +1,4 @@
-import { PageLayout } from "@features/global/components/PageLayout";
+import { PageLayout } from "@features/_global/components/PageLayout";
 import { DepartmentContent } from "../components/DepartmentContent";
 
 export const DepartmentsViews = () => {

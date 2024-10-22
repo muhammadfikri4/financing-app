@@ -6,7 +6,7 @@ export const SidebarItem: React.FC<ISidebarItemProps> = ({ items, title }) => {
     const location = useLocation()
   return (
     <>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         <div>{title && <p className="text-sm font-poppins font-semibold text-[#999797]">{title}</p>}</div>
         <div className="flex flex-col gap-5">
           {items?.map((item, index) => (
