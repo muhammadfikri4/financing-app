@@ -13,11 +13,6 @@ export const menus: ISidebarItemProps[] = [
         id: 2,
         name: "Department",
         path: "/department",
-      },
-      {
-        id: 3,
-        name: "User",
-        path: "/users",
       }
     ],
   },
@@ -27,73 +22,13 @@ export const menus: ISidebarItemProps[] = [
       {
         id: 4,
         name: "Budget",
-        path: "/budget",
+        path: "/budgets",
       },
       {
         id: 5,
         name: "Progress",
         path: "/progress",
-      },
-      {
-        id: 4,
-        name: "Budget",
-        path: "/budget",
-      },
-      {
-        id: 5,
-        name: "Progress",
-        path: "/progress",
-      },
-      {
-        id: 4,
-        name: "Budget",
-        path: "/budget",
-      },
-      {
-        id: 5,
-        name: "Progress",
-        path: "/progress",
-      },
-      {
-        id: 4,
-        name: "Budget",
-        path: "/budget",
-      },
-      {
-        id: 5,
-        name: "Progress",
-        path: "/progress",
-      },
-      {
-        id: 4,
-        name: "Budget",
-        path: "/budget",
-      },
-      {
-        id: 5,
-        name: "Progress",
-        path: "/progress",
-      },
-      {
-        id: 4,
-        name: "Budget",
-        path: "/budget",
-      },
-      {
-        id: 5,
-        name: "Progress",
-        path: "/progress",
-      },
-      {
-        id: 4,
-        name: "Budget",
-        path: "/budget",
-      },
-      {
-        id: 5,
-        name: "Progress",
-        path: "/progress",
-      },
+      }
     ],
   },
 ];

@@ -23,6 +23,14 @@ export const router = createBrowserRouter([
         path: "/users",
         element: <UsersViews />,
       },
+      {
+        path: "/budgets",
+        element: <DepartmentsViews />,
+      },
+      {
+        path: "/progress",
+        element: <UsersViews />,
+      },
     ],
   },
   {

@@ -23,6 +23,7 @@ export const MasterTable = <T extends DefaultKey>({
   title,
   withAction = true,
   columnTable,
+  isLoading
 }: IMasterTableProps<T>) => {
   return (
     <div className="border-[1.5px] border-solid border-[#cdcdcd] overflow-auto rounded-md bg-[#fefefe]">
@@ -39,7 +40,7 @@ export const MasterTable = <T extends DefaultKey>({
             {withAction ? <th></th> : null}
           </tr>
         </thead>
-        <tbody>
+        <tbody className="w-full">
           {data?.length ? (
             data?.map((item, index) => (
               <tr
@@ -55,8 +56,8 @@ export const MasterTable = <T extends DefaultKey>({
                   </td>
                 ))}
                 {withAction && (
-                  <td className="p-4 bg-gray-100 text-left">
-                    <div className="w-36 flex items-center justify-center gap-2">
+                  <td className="p-4 bg-gray-100">
+                    <div className="md:w-36 flex items-center justify-center gap-2">
                       <Button size="md">Detail</Button>
                       <Button size="md" variant="success">
                         Update
@@ -69,6 +70,14 @@ export const MasterTable = <T extends DefaultKey>({
                 )}
               </tr>
             ))
+          ) : isLoading ? (
+            <td colSpan={columnTable.length + (withAction ? 1 : 0)}>
+              <div className="w-full h-64 flex items-center justify-center">
+              <Poppins>
+                Loading...
+              </Poppins>
+              </div>
+            </td>
           ) : (
             <EmptyState
               colspan={columnTable.length + (withAction ? 1 : 0)}

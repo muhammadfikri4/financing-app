@@ -4,7 +4,7 @@ import { Poppins } from "@features/_global/components/Text/Poppins";
 import { useUser } from "../hooks/useUser";
 
 export const UserContent = () => {
-  const { data: users } = useUser();
+  const { data: users, isLoading } = useUser();
 
   return (
     <>
@@ -14,6 +14,7 @@ export const UserContent = () => {
           id: item.id,
         }))}
         withAction={false}
+        isLoading={isLoading}
         title={["Name", "Email", "Role", "Department", "Status"]}
         columnTable={[
           {

@@ -2,7 +2,7 @@ import React from "react";
 
 interface IBadgesProps {
   text: string;
-  variant?: "primary" | "secondary" | "danger";
+  variant?: "primary" | "secondary" | "danger" | 'success';
   size?: 'sm' | 'md' | 'lg'
 }
 
@@ -25,6 +25,12 @@ const generateVariant = (variant: IBadgesProps["variant"]) => {
         bg: "bg-red-200",
         border: "border-red-500",
         text: "text-red-600",
+      };
+    case "success":
+      return {
+        bg: "bg-green-200",
+        border: "border-green-500",
+        text: "text-green-600",
       };
     default:
       return {
@@ -59,7 +65,7 @@ export const Badges: React.FC<IBadgesProps> = ({
         generateVariant(variant).bg
       } w-max ${generatedSize(size)} rounded-md border border-solid ${
         generateVariant(variant).border
-      }`}
+      } duration-300`}
     >
       <p className={`text-xs ${generateVariant(variant).text}`}>{text}</p>
     </div>
